@@ -1,0 +1,11 @@
+# src: .tool-versions
+# @(#) : development tool versions
+#
+# Copyright (c) 2026- atsushifx <http://github.com/atsushifx>
+#
+# This software is released under the MIT License.
+# https://opensource.org/licenses/MIT
+
+go 1.26
+golangci-lint 2.10.1
+goreleaser 2.14.1
