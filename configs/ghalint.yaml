@@ -9,4 +9,4 @@
 
 # Exclude specific policies if needed
 excludes:
-  # Allow version tags for reusable workflow calls instead of SHA pinning
+# Allow version tags for reusable workflow calls instead of SHA pinning
