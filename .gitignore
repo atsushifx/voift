@@ -60,6 +60,8 @@ $~*
 # agents can tracking
 !.claude/agents/
 !.claude/agents/**
+!.claude/rules/
+!.claude/rules/**
 
 # MCP server dependency files
 .cocoindex_code/
@@ -92,7 +94,7 @@ node_modules/
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
 #
 
-# binaries, distination dir
+# binaries, destinations, and build files
 bin/
 dist/
 
