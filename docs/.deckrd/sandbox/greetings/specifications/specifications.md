@@ -132,12 +132,19 @@ No reordering is permitted.
 
 ## 5. Edge Cases
 
-| Input         | Classification    | Rationale                                                   |
-| ------------- | ----------------- | ----------------------------------------------------------- |
-| `""`          | `"Hello, !"`      | 空文字列のトリムは空文字列のまま; フォーマットを適用する    |
-| `"   "`       | `"Hello, !"`      | 空白のみはトリム後に空文字列になる; フォーマットを適用する  |
-| `"  Alice  "` | `"Hello, Alice!"` | 前後の空白をトリムし、残った `"Alice"` をフォーマットに適用 |
-| `"太郎"`      | `"Hello, 太郎!"`  | マルチバイト文字はトリム対象外; そのままフォーマットに適用  |
+Empty name is allowed. When input is `""` or whitespace-only, result becomes `"Hello, !"`.
+
+<!-- markdownlint-disable line-length -->
+
+| Input            | Classification        | Rationale                                                                |
+| ---------------- | --------------------- | ------------------------------------------------------------------------ |
+| `""`             | `"Hello, !"`          | 空文字列のトリムは空文字列のまま; フォーマットを適用する                 |
+| `"   "`          | `"Hello, !"`          | 空白のみはトリム後に空文字列になる; フォーマットを適用する               |
+| `"  Alice  "`    | `"Hello, Alice!"`     | 前後の空白をトリムし、残った `"Alice"` をフォーマットに適用              |
+| `"太郎"`         | `"Hello, 太郎!"`      | マルチバイト文字はトリム対象外; そのままフォーマットに適用               |
+| `" Alice 太郎 "` | `"Hello, Alice 太郎!"` | Unicode混在文字列の前後空白をトリムし、フォーマットを適用               |
+
+<!-- markdownlint-enable -->
 
 ---
 
@@ -161,6 +168,7 @@ None identified - all requirements are unambiguous.
 
 ## 8. Change History
 
-| Date       | Version | Description           |
-| ---------- | ------- | --------------------- |
-| 2026-03-06 | 1.0     | Initial specification |
+| Date       | Version | Description                                              |
+| ---------- | ------- | -------------------------------------------------------- |
+| 2026-03-06 | 1.0     | Initial specification                                    |
+| 2026-03-08 | 1.1     | Section 5: Unicode混在ケースと空文字列エッジケースを明記 |
