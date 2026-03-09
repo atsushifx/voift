@@ -43,6 +43,7 @@ $~*
 
 ## Development tools (installed locally)
 .tools/
+.local/
 
 ## Worktrees
 # worktree base dir
