@@ -2,6 +2,7 @@
 deckrd
 GOARCH
 GOBUILD
+godog
 GOFMT
 golangci
 shdoc
